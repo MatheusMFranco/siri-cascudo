@@ -1,4 +1,3 @@
-import { Story } from "@storybook/react";
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../src/styles/global.styles'
 import { theme } from '../src/styles/theme'
@@ -22,7 +21,7 @@ export const parameters = {
 }
 
 export const decorators = [
-  (Story: Story) => (
+  (Story: any) => (
     <ThemeProvider theme={theme}>
       <Story />
       <GlobalStyles />
