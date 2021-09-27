@@ -8,9 +8,12 @@
     "start": "next start",
     "lint": "eslint src --max-warnings=0",
     "pre-commit": "lint-staged",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@styled-icons/material-outlined": "^10.34.0",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -23,8 +26,13 @@
     }
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/react": "^6.3.8",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.1.0",
     "@types/node": "^16.10.1",
@@ -32,6 +40,7 @@
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
+    "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.13.2",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
