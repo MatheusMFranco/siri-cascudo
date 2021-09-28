@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Order } from '../model/order.model';
+import { Order } from '../models/order.model';
 import * as service from './api/OrderService';
 
 export default function Home() {

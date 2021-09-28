@@ -1,4 +1,4 @@
-import { Order } from '../../model/order';
+import { Order } from '../../models/order.model';
 
 function Order(data: Order) {
   return <h1>{data.name}</h1>;
