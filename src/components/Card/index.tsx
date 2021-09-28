@@ -16,13 +16,13 @@ export const Card = ({ name, description, price, id }: Order) => {
   });
   const toggleService = interpret(toggleMachine).start();
   const [active, setActive] = useState(false);
-  const [dishes, setDishes] = useSelection();
+  //const [dishes, setDishes] = useSelection();
 
   const activateCard = (card: number) => {
     toggleService.send('TOGGLE');
     setActive('active' === toggleService.getSnapshot().value);
-    dishes.push({ id: card, amount: 1 });
-    setDishes(dishes);
+    //dishes.push({ id: card, amount: 1 });
+    //setDishes(dishes);
   };
 
   return (

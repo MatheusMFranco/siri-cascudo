@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Card } from '../components/Card';
 import { Order } from '../models/order.model';
 import * as service from './api/OrderService';
 
@@ -17,7 +18,13 @@ export default function Home() {
 
   return (
     <section>
-      {!loading && <p>{list[0].name}</p>}
+      {!loading && (
+        <div>
+          {list.map((item: Order) => (
+            <Card {...item} key={item.id} />
+          ))}
+        </div>
+      )}
       {loading && <p>Loading...</p>}
     </section>
   );
